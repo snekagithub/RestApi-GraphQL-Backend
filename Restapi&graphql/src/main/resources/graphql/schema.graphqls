@@ -1,0 +1,25 @@
+type Query{
+    customers:[CustomerEntity]
+    customerById(customerId:ID):CustomerEntity
+#    specificCustomer(input:specificCustomerInput):CustomerEntity
+}
+
+##input specificCustomerInput{
+##    customerId:ID
+##    name:String
+#}
+type Mutation{
+    addCustomers(input:customerInput):CustomerEntity
+}
+input customerInput{
+    customerId:ID
+    name:String
+    address:String
+    phoneNum:String
+}
+type CustomerEntity{
+    customerId:ID
+    name:String
+    address:String
+    phoneNum:String
+}
